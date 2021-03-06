@@ -21,7 +21,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.androiddevchallenge.di.DaggerFeatureComponent
-import com.example.androiddevchallenge.presentation.ui.screen.ListScreen
+import com.example.androiddevchallenge.presentation.ui.screen.MainNavController
 import com.example.androiddevchallenge.presentation.ui.theme.MainTheme
 import com.example.androiddevchallenge.presentation.viewmodel.MainViewModel
 import javax.inject.Inject
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MainTheme {
-                ListScreen(viewModel.cats)
+                MainNavController(viewModel)
             }
         }
     }
